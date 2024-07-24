@@ -6,9 +6,9 @@ import androidx.room.TypeConverters
 import com.example.tasktracker2.converters.ConvertersBoolean
 import com.example.tasktracker2.converters.ConvertersLocalDate
 import com.example.tasktracker2.converters.ConvertersLocalTime
-import com.example.tasktracker2.model.Task
+import com.example.tasktracker2.model.TaskDto
 
-@Database(entities = [Task::class], version = 1)
+@Database(entities = [TaskDto::class], version = 1)
 @TypeConverters(
     ConvertersLocalDate::class,
     ConvertersLocalTime::class,

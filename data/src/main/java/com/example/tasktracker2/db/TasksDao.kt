@@ -5,24 +5,23 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.example.tasktracker2.model.Task
-import kotlinx.coroutines.flow.Flow
+import com.example.tasktracker2.model.TaskDto
 
 @Dao
 interface TasksDao {
 
     @Query("SELECT * FROM tasks WHERE activity LIKE 'ACTIVE'")
-    suspend fun getActiveTasks() : List<Task>
+    suspend fun getActiveTasks() : List<TaskDto>
 
     @Query("SELECT * FROM tasks WHERE activity LIKE 'COMPLETED'")
-    suspend fun getCompletedTasks() : List<Task>
+    suspend fun getCompletedTasks() : List<TaskDto>
 
-    @Insert(entity = Task::class)
-    suspend fun addNewTask(task: Task)
+    @Insert(entity = TaskDto::class)
+    suspend fun addNewTask(taskDto: TaskDto)
 
     @Update
-    suspend fun updateTask(modifiedTask: Task)
+    suspend fun updateTask(modifiedTaskDto: TaskDto)
 
     @Delete
-    suspend fun deleteTask(task: Task)
+    suspend fun deleteTask(taskDto: TaskDto)
 }
