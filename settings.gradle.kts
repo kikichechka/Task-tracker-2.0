@@ -21,5 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Task Tracker 2"
 include(":app")
-include(":domain")
 include(":data")
+include(":domain")

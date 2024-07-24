@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Task Tracker 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="task_planner">Контроль задач</string>
+    <string name="active">Активные</string>
+    <string name="completed">Завершенные</string>
+    <string name="add_task">Добавить задачу</string>
 </resources>
