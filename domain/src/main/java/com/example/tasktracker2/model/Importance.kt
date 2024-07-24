@@ -1,4 +1,4 @@
-package com.example.tasktracker2
+package com.example.tasktracker2.model
 
 enum class Importance(str: String) {
     LOW("Низкая"),

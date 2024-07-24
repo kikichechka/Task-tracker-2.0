@@ -1,6 +1,6 @@
 package com.example.tasktracker2.repository
 
-import com.example.tasktracker2.Task
+import com.example.tasktracker2.model.Task
 import com.example.tasktracker2.db.TasksDao
 import com.example.tasktracker2.model.mapToDto
 import javax.inject.Inject

@@ -1,7 +1,5 @@
 package com.example.tasktracker2.model
 
-import com.example.tasktracker2.Importance
-
 enum class ImportanceDto {
     LOW {
         override fun mapToModel(): Importance {

@@ -1,4 +1,4 @@
-package com.example.tasktracker2
+package com.example.tasktracker2.model
 
 import java.time.LocalDate
 import java.time.LocalTime
