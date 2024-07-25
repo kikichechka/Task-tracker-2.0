@@ -1,4 +1,4 @@
-package com.example.tasktracker2
+package com.example.tasktracker2.fragments.main
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,10 +9,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import com.example.tasktracker2.R
 import com.example.tasktracker2.databinding.FragmentMainTaskBinding
+import com.example.tasktracker2.fragments.active.ActiveTasksFragment
+import com.example.tasktracker2.fragments.completed.CompletedTasksFragment
 import com.example.tasktracker2.model.StateTask
-import com.google.android.material.button.MaterialButton
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class MainTaskFragment : Fragment() {

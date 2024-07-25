@@ -4,7 +4,7 @@ import java.time.LocalDate
 import java.time.LocalTime
 
 class Task (
-    val id: Int,
+    val id: Int? = null,
     var importance: Importance,
     var activity: Activity = Activity.ACTIVE,
     var startDate: LocalDate?,

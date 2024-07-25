@@ -2,6 +2,7 @@ package com.example.tasktracker2.usecase.get
 
 import com.example.tasktracker2.model.Task
 import com.example.tasktracker2.repository.GetTaskRepository
+import com.example.tasktracker2.usecases.GetActiveTasksUseCase
 import javax.inject.Inject
 
 class GetActiveTasksUseCaseImpl @Inject constructor(

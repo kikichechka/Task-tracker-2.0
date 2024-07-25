@@ -10,11 +10,8 @@ import com.example.tasktracker2.model.TaskDto
 @Dao
 interface TasksDao {
 
-    @Query("SELECT * FROM tasks WHERE activity LIKE 'ACTIVE'")
-    suspend fun getActiveTasks() : List<TaskDto>
-
-    @Query("SELECT * FROM tasks WHERE activity LIKE 'COMPLETED'")
-    suspend fun getCompletedTasks() : List<TaskDto>
+    @Query("SELECT * FROM tasks")
+    suspend fun getAllTasks() : List<TaskDto>
 
     @Insert(entity = TaskDto::class)
     suspend fun addNewTask(taskDto: TaskDto)

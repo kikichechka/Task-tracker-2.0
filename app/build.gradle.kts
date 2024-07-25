@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -39,6 +41,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
     implementation(project(":data"))
 
     implementation(libs.androidx.core.ktx)
@@ -52,4 +55,15 @@ dependencies {
 
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+
+    implementation(libs.hilt)
+    kapt(libs.hiltCompiler)
+
+    implementation(libs.glide)
+
+    implementation(libs.paging)
+}
+
+kapt {
+    correctErrorTypes = true
 }

@@ -1,7 +1,8 @@
-package com.example.tasktracker2.usecase.change
+package com.example.tasktracker2.usecases
 
 import com.example.tasktracker2.model.Task
 import com.example.tasktracker2.repository.ChangeTaskRepository
+import com.example.tasktracker2.usecase.change.ChangeTaskUseCase
 import javax.inject.Inject
 
 class ChangeTaskUseCaseImpl @Inject constructor(

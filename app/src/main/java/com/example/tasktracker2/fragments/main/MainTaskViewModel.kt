@@ -1,4 +1,4 @@
-package com.example.tasktracker2
+package com.example.tasktracker2.fragments.main
 
 import androidx.lifecycle.ViewModel
 import com.example.tasktracker2.model.StateTask

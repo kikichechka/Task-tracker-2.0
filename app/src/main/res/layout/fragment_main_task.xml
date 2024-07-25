@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainTaskFragment">
+    tools:context=".fragments.main.MainTaskFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -62,10 +62,12 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container_for_fragment"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_navigation_buttons" />
+        app:layout_constraintTop_toBottomOf="@+id/container_navigation_buttons"
+        app:layout_constraintStart_toStartOf="@id/container_navigation_buttons"
+        app:layout_constraintEnd_toEndOf="@id/container_navigation_buttons"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

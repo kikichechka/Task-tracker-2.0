@@ -6,5 +6,8 @@
     <color name="light_grey">#263238</color>
     <color name="yellow">#FED36A</color>
     <color name="text_color_grey">#8A8F9B</color>
+    <color name="green">#279600</color>
+    <color name="orange">#DF8412</color>
+    <color name="red">#FF001F</color>
 
 </resources>

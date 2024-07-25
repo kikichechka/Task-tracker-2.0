@@ -8,10 +8,14 @@ import javax.inject.Inject
 class GetTaskRepositoryImpl @Inject constructor(private val tasksDao: TasksDao) :
     GetTaskRepository {
     override suspend fun getActiveTasks(): List<Task> {
-        return tasksDao.getActiveTasks().map { it.mapToModel() }
+        return tasksDao.getAllTasks()
+            .filter { it.activity }
+            .map { it.mapToModel() }
     }
 
     override suspend fun getCompletedTasks(): List<Task> {
-        return tasksDao.getCompletedTasks().map { it.mapToModel() }
+        return tasksDao.getAllTasks()
+            .filter { !it.activity }
+            .map { it.mapToModel() }
     }
 }

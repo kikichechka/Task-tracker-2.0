@@ -21,4 +21,31 @@
         <item name="android:textColor">@color/grey</item>
     </style>
 
+    <style name="style_active_item_task_deadline">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="style_completed_item_task_deadline">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_color_grey</item>
+    </style>
+
+    <style name="style_active_item_task_title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="style_completed_item_task_title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_color_grey</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="style_item_task_description">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/text_color_grey</item>
+    </style>
+
 </resources>

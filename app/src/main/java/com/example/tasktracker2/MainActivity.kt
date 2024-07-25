@@ -9,7 +9,10 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.tasktracker2.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.qualifiers.ActivityContext
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

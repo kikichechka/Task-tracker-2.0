@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/activeTaskFragment"
-        android:name="com.example.tasktracker2.MainTaskFragment"
+        android:name="com.example.tasktracker2.fragments.main.MainTaskFragment"
         android:label="active_task_fragment"
         tools:layout="@layout/fragment_main_task">
     </fragment>

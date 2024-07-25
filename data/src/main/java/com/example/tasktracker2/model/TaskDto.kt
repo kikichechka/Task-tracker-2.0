@@ -9,7 +9,7 @@ import java.time.LocalTime
 @Entity(tableName = "tasks")
 data class TaskDto(
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: Int? = null,
     @ColumnInfo(name = "importance")
     var importanceDto: ImportanceDto,
     @ColumnInfo(name = "activity")
