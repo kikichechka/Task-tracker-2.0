@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI.setupWithNavController
 import com.example.tasktracker2.databinding.ActivityMainBinding
@@ -20,5 +21,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         window.navigationBarColor = resources.getColor(R.color.grey, null)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment_container)
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

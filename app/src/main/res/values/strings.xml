@@ -6,4 +6,14 @@
     <string name="active">Активные</string>
     <string name="completed">Завершенные</string>
     <string name="add_task">Добавить задачу</string>
+    <string name="create_new_task">Создать новую задачу</string>
+    <string name="importance">Важность</string>
+    <string name="low">Низкая</string>
+    <string name="average">Средняя</string>
+    <string name="high">Высокая</string>
+    <string name="select_date">Выбрать дату</string>
+    <string name="start">Старт</string>
+    <string name="completion">Завершение</string>
+    <string name="description">Описание</string>
+    <string name="title">Название</string>
 </resources>

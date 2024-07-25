@@ -48,4 +48,30 @@
         <item name="android:textColor">@color/text_color_grey</item>
     </style>
 
+    <style name="style_create_new_task_importance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="style_text_button_importance">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="style_text_start">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="style_hint_title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_color_grey</item>
+        <item name="android:textColorHint">@color/text_color_grey</item>
+    </style>
+
+    <style name="style_text_title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
 </resources>

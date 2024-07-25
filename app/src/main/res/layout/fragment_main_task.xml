@@ -17,7 +17,7 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="wrap_content"
             app:menu="@menu/top_app_bar"
             app:title="@string/task_planner" />
 
@@ -27,6 +27,7 @@
         android:id="@+id/container_navigation_buttons"
         android:layout_width="match_parent"
         android:layout_height="52dp"
+        android:layout_marginTop="10dp"
         android:layout_marginHorizontal="20dp"
         android:backgroundTint="@color/light_grey"
         app:cardCornerRadius="10dp"

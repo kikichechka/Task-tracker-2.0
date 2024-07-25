@@ -10,6 +10,13 @@
         android:name="com.example.tasktracker2.fragments.main.MainTaskFragment"
         android:label="active_task_fragment"
         tools:layout="@layout/fragment_main_task">
+        <action
+            android:id="@+id/action_activeTaskFragment_to_createNewTaskFragment"
+            app:destination="@id/createNewTaskFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/createNewTaskFragment"
+        android:name="com.example.tasktracker2.fragments.create.CreateNewTaskFragment"
+        android:label="CreateNewTaskFragment" />
 
 </navigation>

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.example.tasktracker2.R
 import com.example.tasktracker2.databinding.FragmentMainTaskBinding
 import com.example.tasktracker2.fragments.active.ActiveTasksFragment
@@ -72,7 +73,7 @@ class MainTaskFragment : Fragment() {
         binding.topAppBar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.menu_button_add_new -> {
-
+                    findNavController().navigate(R.id.action_activeTaskFragment_to_createNewTaskFragment)
                     true
                 }
 
