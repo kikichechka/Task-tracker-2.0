@@ -6,16 +6,16 @@ enum class ImportanceModel(val str: String) {
     HIGH("Высокая")
 }
 
-fun Importance.mapToModel() : ImportanceModel {
-    return when(this) {
+fun Importance.mapToModel(): ImportanceModel {
+    return when (this) {
         Importance.LOW -> ImportanceModel.LOW
         Importance.MEDIUM -> ImportanceModel.MEDIUM
         Importance.HIGH -> ImportanceModel.HIGH
     }
 }
 
-fun ImportanceModel.mapToDomain() : Importance {
-    return when(this) {
+fun ImportanceModel.mapToDomain(): Importance {
+    return when (this) {
         ImportanceModel.LOW -> Importance.LOW
         ImportanceModel.MEDIUM -> Importance.MEDIUM
         ImportanceModel.HIGH -> Importance.HIGH

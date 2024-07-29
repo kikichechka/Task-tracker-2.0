@@ -7,15 +7,7 @@ import javax.inject.Inject
 
 class GetTaskRepositoryImpl @Inject constructor(private val tasksDao: TasksDao) :
     GetTaskRepository {
-    override suspend fun getActiveTasks(): List<Task> {
-        return tasksDao.getAllTasks()
-            .filter { it.activity }
-            .map { it.mapToModel() }
-    }
-
-    override suspend fun getCompletedTasks(): List<Task> {
-        return tasksDao.getAllTasks()
-            .filter { !it.activity }
-            .map { it.mapToModel() }
+    override suspend fun getListTasks(): List<Task> {
+        return tasksDao.getAllTasks().map { it.mapToModel() }
     }
 }

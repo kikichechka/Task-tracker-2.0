@@ -12,8 +12,6 @@ data class TaskDto(
     val id: Int? = null,
     @ColumnInfo(name = "importance")
     var importanceDto: ImportanceDto,
-    @ColumnInfo(name = "activity")
-    var activity: Boolean = true,
     @ColumnInfo(name = "start_date")
     var startDate: LocalDate?,
     @ColumnInfo(name = "start_time")
@@ -32,7 +30,6 @@ fun TaskDto.mapToModel(): Task {
     return Task(
         id = id,
         importance = importanceDto.mapToModel(),
-        activity = if (activity) Activity.ACTIVE else Activity.COMPLETED,
         startDate = startDate,
         startTime = startTime,
         completionDate = completionDate,
@@ -49,10 +46,6 @@ fun Task.mapToDto(): TaskDto {
             Importance.LOW -> ImportanceDto.LOW
             Importance.MEDIUM -> ImportanceDto.MEDIUM
             Importance.HIGH -> ImportanceDto.HIGH
-        },
-        activity = when (activity) {
-            Activity.ACTIVE -> true
-            Activity.COMPLETED -> false
         },
         startDate = startDate,
         startTime = startTime,

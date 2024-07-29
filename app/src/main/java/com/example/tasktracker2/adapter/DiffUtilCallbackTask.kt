@@ -1,4 +1,4 @@
-package com.example.tasktracker2.fragments.adapter
+package com.example.tasktracker2.adapter
 
 import android.annotation.SuppressLint
 import androidx.recyclerview.widget.DiffUtil

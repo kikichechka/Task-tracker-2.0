@@ -10,8 +10,8 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginHorizontal="@dimen/margin_bottom_for_card_item"
+        android:layout_marginTop="@dimen/margin_top_app_bar_layout"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -26,18 +26,18 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/container_navigation_buttons"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_height="@dimen/container_navigation_buttons_height"
+        android:layout_marginTop="@dimen/margin_start_items_in_card_deadline"
+        android:layout_marginHorizontal="@dimen/margin_start_title_card"
         android:backgroundTint="@color/light_grey"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="@dimen/corner_radius_card_item"
         app:layout_constraintTop_toBottomOf="@id/appBarLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:padding="5dp"
+            android:padding="@dimen/margin_bottom_title_start"
             android:weightSum="2">
 
             <com.google.android.material.button.MaterialButton
@@ -61,14 +61,35 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/container_for_fragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container_navigation_buttons"
-        app:layout_constraintStart_toStartOf="@id/container_navigation_buttons"
-        app:layout_constraintEnd_toEndOf="@id/container_navigation_buttons"/>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/min_width_end_button_low"
+        android:src="@drawable/group"
+        app:layout_constraintTop_toBottomOf="@id/container_navigation_buttons"
+        app:layout_constraintBottom_toTopOf="@id/button_add_new"
+        android:layout_marginHorizontal="@dimen/margin_start_card_deadline"
+        android:layout_marginVertical="@dimen/margin_bottom_for_card_item"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/min_width_end_button_low"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/container_navigation_buttons"
+        app:layout_constraintBottom_toTopOf="@id/button_add_new"
+        android:layout_marginHorizontal="@dimen/margin_start_card_deadline"
+        android:layout_marginVertical="@dimen/margin_bottom_for_card_item"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_add_new"
+        style="@style/style_button_add_new"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button_add_new"
+        android:layout_margin="@dimen/margin_start_card_deadline"
+        android:text="@string/add_task"
+        app:backgroundTint="@color/yellow"
+        app:cornerRadius="@dimen/corner_radius_card_item"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

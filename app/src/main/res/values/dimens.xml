@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_bottom_for_card_item">10dp</dimen>
+    <dimen name="corner_radius_card_item">10dp</dimen>
+    <dimen name="card_deadline_width">159dp</dimen>
+    <dimen name="card_deadline_height">32dp</dimen>
+    <dimen name="margin_start_card_deadline">20dp</dimen>
+    <dimen name="margin_horizontal">20dp</dimen>
+    <dimen name="margin_top">12dp</dimen>
+    <dimen name="margin_top_card_deadline">20dp</dimen>
+    <dimen name="corner_radius_card_deadline">7dp</dimen>
+    <dimen name="margin_start_items_in_card_deadline">10dp</dimen>
+    <dimen name="text_size_deadline">13sp</dimen>
+    <dimen name="card_importance_width">76dp</dimen>
+    <dimen name="card_importance_height">32dp</dimen>
+    <dimen name="corner_radius_card_importance_height">7dp</dimen>
+    <dimen name="margin_end_button_menu">20dp</dimen>
+    <dimen name="width_title_card">280dp</dimen>
+    <dimen name="height_title_card">60dp</dimen>
+    <dimen name="margin_start_title_card">20dp</dimen>
+    <dimen name="margin_top_title_card">11dp</dimen>
+    <dimen name="margin_end_button_low">8dp</dimen>
+    <dimen name="min_width_end_button_low">0dp</dimen>
+    <dimen name="margin_bottom_title_start">5dp</dimen>
+    <dimen name="margin_separator">3dp</dimen>
+    <dimen name="height_card_title">56dp</dimen>
+    <dimen name="description_height">158dp</dimen>
+    <dimen name="margin_top_app_bar_layout">29dp</dimen>
+    <dimen name="height_button_add_new">48dp</dimen>
+    <dimen name="container_navigation_buttons_height">52dp</dimen>
+</resources>

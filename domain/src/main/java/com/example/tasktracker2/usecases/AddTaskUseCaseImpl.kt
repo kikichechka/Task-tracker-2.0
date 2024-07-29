@@ -2,7 +2,6 @@ package com.example.tasktracker2.usecases
 
 import com.example.tasktracker2.model.Task
 import com.example.tasktracker2.repository.AddTaskRepository
-import com.example.tasktracker2.usecase.add.AddTaskUseCase
 import javax.inject.Inject
 
 class AddTaskUseCaseImpl @Inject constructor(

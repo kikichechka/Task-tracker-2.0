@@ -7,16 +7,14 @@ import com.example.tasktracker2.repository.ChangeTaskRepository
 import com.example.tasktracker2.repository.ChangeTaskRepositoryImpl
 import com.example.tasktracker2.repository.GetTaskRepository
 import com.example.tasktracker2.repository.GetTaskRepositoryImpl
-import com.example.tasktracker2.usecase.add.AddTaskUseCase
-import com.example.tasktracker2.usecase.change.ChangeTaskUseCase
-import com.example.tasktracker2.usecase.delete.DeleteTaskUseCase
+import com.example.tasktracker2.usecases.AddTaskUseCase
+import com.example.tasktracker2.usecases.ChangeTaskUseCase
+import com.example.tasktracker2.usecases.DeleteTaskUseCase
 import com.example.tasktracker2.usecases.ChangeTaskUseCaseImpl
 import com.example.tasktracker2.usecases.DeleteTaskUseCaseImpl
-import com.example.tasktracker2.usecase.get.GetActiveTasksUseCaseImpl
-import com.example.tasktracker2.usecase.get.GetCompletedTasksUseCase
-import com.example.tasktracker2.usecases.GetCompletedTasksUseCaseImpl
+import com.example.tasktracker2.usecases.GetListTasksUseCaseImpl
 import com.example.tasktracker2.usecases.AddTaskUseCaseImpl
-import com.example.tasktracker2.usecases.GetActiveTasksUseCase
+import com.example.tasktracker2.usecases.GetListTasksUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,20 +27,10 @@ class DataModule {
 
     @Provides
     @Singleton
-    fun provideGetActiveTasksUseCase(
+    fun provideGetListTasksUseCase(
         getTaskRepository: GetTaskRepositoryImpl
-    ): GetActiveTasksUseCase {
-        return GetActiveTasksUseCaseImpl(
-            getTaskRepository = getTaskRepository
-        )
-    }
-
-    @Provides
-    @Singleton
-    fun provideGetCompletedTasksUseCase(
-        getTaskRepository: GetTaskRepositoryImpl
-    ): GetCompletedTasksUseCase {
-        return GetCompletedTasksUseCaseImpl(
+    ): GetListTasksUseCase {
+        return GetListTasksUseCaseImpl(
             getTaskRepository = getTaskRepository
         )
     }

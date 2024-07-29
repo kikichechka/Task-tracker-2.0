@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Task Tracker 2</string>
+    <string name="app_name">Трекер задач</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="task_planner">Контроль задач</string>
@@ -16,4 +16,10 @@
     <string name="completion">Завершение</string>
     <string name="description">Описание</string>
     <string name="title">Название</string>
+    <string name="separator">/</string>
+    <string name="delete">Удалить</string>
+    <string name="change">Изменить</string>
+    <string name="change_task">Изменить задачу</string>
+    <string name="save_task">Сохранить изменения</string>
+    <string name="create_task">Задача создана</string>
 </resources>

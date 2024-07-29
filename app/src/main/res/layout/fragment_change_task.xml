@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".fragments.main.MainTaskFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_bottom_for_card_item"
+        android:layout_marginTop="@dimen/margin_top_app_bar_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/left_repo"
+            app:title="@string/change_task" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.example.tasktracker2.fragments.CustomTask
+        android:id="@+id/custom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/min_width_end_button_low"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toTopOf="@id/button_add_new"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_add_new"
+        style="@style/style_button_add_new"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button_add_new"
+        android:layout_margin="@dimen/margin_start_title_card"
+        android:background="@drawable/selector_button"
+        android:text="@string/save_task"
+        app:backgroundTint="@color/yellow"
+        app:cornerRadius="@dimen/corner_radius_card_item"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

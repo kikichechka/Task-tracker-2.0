@@ -8,8 +8,8 @@ import javax.inject.Inject
 class ChangeTaskRepositoryImpl @Inject constructor(
     private val tasksDao: TasksDao
 ) : ChangeTaskRepository {
-    override suspend fun deleteTask(task: Task) {
-        tasksDao.deleteTask(task.mapToDto())
+    override suspend fun deleteTask(id: Int) {
+        tasksDao.deleteTask(id)
     }
 
     override suspend fun updateTask(task: Task) {

@@ -3,20 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/activeTaskFragment">
+    app:startDestination="@id/mainTaskFragment">
 
     <fragment
-        android:id="@+id/activeTaskFragment"
+        android:id="@+id/mainTaskFragment"
         android:name="com.example.tasktracker2.fragments.main.MainTaskFragment"
         android:label="active_task_fragment"
         tools:layout="@layout/fragment_main_task">
         <action
-            android:id="@+id/action_activeTaskFragment_to_createNewTaskFragment"
+            android:id="@+id/action_mainTaskFragment_to_createNewTaskFragment"
             app:destination="@id/createNewTaskFragment" />
+        <action
+            android:id="@+id/action_mainTaskFragment_to_changeTaskFragment"
+            app:destination="@id/changeTaskFragment" >
+            <argument
+                android:name="TaskArg"
+                app:argType="com.example.tasktracker2.model.TaskModel" />
+        </action>
     </fragment>
+
     <fragment
         android:id="@+id/createNewTaskFragment"
         android:name="com.example.tasktracker2.fragments.create.CreateNewTaskFragment"
         android:label="CreateNewTaskFragment" />
+
+    <fragment
+        android:id="@+id/changeTaskFragment"
+        android:name="com.example.tasktracker2.fragments.change.ChangeTaskFragment"
+        android:label="ChangeTaskFragment" />
 
 </navigation>

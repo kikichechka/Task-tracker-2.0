@@ -1,7 +1,5 @@
-package com.example.tasktracker2.usecase.delete
-
-import com.example.tasktracker2.model.Task
+package com.example.tasktracker2.usecases
 
 interface DeleteTaskUseCase {
-    suspend fun delete(task: Task)
+    suspend fun delete(id: Int)
 }

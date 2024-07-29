@@ -1,7 +1,6 @@
 package com.example.tasktracker2.db
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
@@ -11,7 +10,7 @@ import com.example.tasktracker2.model.TaskDto
 interface TasksDao {
 
     @Query("SELECT * FROM tasks")
-    suspend fun getAllTasks() : List<TaskDto>
+    suspend fun getAllTasks(): List<TaskDto>
 
     @Insert(entity = TaskDto::class)
     suspend fun addNewTask(taskDto: TaskDto)
@@ -19,6 +18,6 @@ interface TasksDao {
     @Update
     suspend fun updateTask(modifiedTaskDto: TaskDto)
 
-    @Delete
-    suspend fun deleteTask(taskDto: TaskDto)
+    @Query("DELETE FROM tasks WHERE id = :id")
+    suspend fun deleteTask(id: Int)
 }

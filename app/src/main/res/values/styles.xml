@@ -58,6 +58,12 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="style_text_button_choose_importance">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">italic|bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
     <style name="style_text_start">
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/white</item>
